@@ -83,244 +83,27 @@
             </div>
         </div>
     </section>
-    <section class="mb-3">
+    <section class="mb-3" id="skills">
         <h2 class="p-3 mb-4 border-bottom">
             <i class="fa-solid fa-screwdriver-wrench"></i>
             Engineering Skills
         </h2>
         <div class="row" data-masonry='{"percentPosition": true }'>
-            <div class="col-md-4">
+            <div class="col-md-4" v-for="skill in skills">
                 <div class="card mb-4">
                     <div class="card-body">
                         <div class="card-text">
-                            <h3>DBMS/DWH</h3>
+                            <h3 class="h4 mb-3">{{ skill.type }}</h3>
                         </div>
                         <div class="card-text">
                             <table class="table table-dark table-striped">
                                 <tbody>
-                                <tr>
-                                    <td>MySQL</td>
-                                    <td>★★★★★</td>
-                                </tr>
-                                <tr>
-                                    <td>Redshift</td>
-                                    <td>★★★<span class="text-muted">☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>PostgreSQL</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Oracle</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>SQLServer</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>Programming Language</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>PHP</td>
-                                    <td>★★★★★</td>
-                                </tr>
-                                <tr>
-                                    <td>Java</td>
-                                    <td>★★★★<span class="text-muted">☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Python</td>
-                                    <td>★★★<span class="text-muted">☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>Jobflow, CI/CD</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Jenkins</td>
-                                    <td>★★★★★</td>
-                                </tr>
-                                <tr>
-                                    <td>Apache Airflow</td>
-                                    <td>★★★★<span class="text-muted">☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Digdag</td>
-                                    <td>★★★★<span class="text-muted">☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>ETL/ELT</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Embulk</td>
-                                    <td>★★★★★</td>
-                                </tr>
-                                <tr>
-                                    <td>dbt</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Airbyte</td>
-                                    <td>★<span class="text-muted">☆☆☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>BI</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Tableau</td>
-                                    <td>★★★★★</td>
-                                </tr>
-                                <tr>
-                                    <td>Metabase</td>
-                                    <td>★★★★<span class="text-muted">☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Superset</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Re:dash</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>PowerBI</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>Metadata Management</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Apache Atlas</td>
-                                    <td>★★★<span class="text-muted">☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>OpenMetadata</td>
-                                    <td>★★<span class="text-muted">☆☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>IaC</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Chef</td>
-                                    <td>★★★<span class="text-muted">☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>Cloud</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>AWS</td>
-                                    <td>★★★<span class="text-muted">☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>GCP</td>
-                                    <td>★<span class="text-muted">☆☆☆☆</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Azure</td>
-                                    <td>★<span class="text-muted">☆☆☆☆</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <h3>Container</h3>
-                        </div>
-                        <div class="card-text">
-                            <table class="table table-dark table-striped">
-                                <tbody>
-                                <tr>
-                                    <td>Docker</td>
-                                    <td>★★★★<span class="text-muted">☆</span></td>
+                                <tr v-for="item in skill.items">
+                                    <td>{{ item.name }}</td>
+                                    <td class="fs-6 text-nowrap text-sm-end">
+                                        {{ "★".repeat(item.level) }}<!-- ソースコードの改行が隙間を生まないようにする
+                                        --><span class="text-muted">{{"☆".repeat(5 - item.level) }}</span>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -351,7 +134,6 @@
         </div>
     </section>
 </div>
-
 <div class="container-fluid mt-5">
     <footer class="footer text-center p-2 border-top">
         <span class="text-muted">&copy; LowSE01</span>
@@ -369,6 +151,8 @@
 <script async
         crossorigin="anonymous" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/app.js" type="module"></script>
 </body>
 
 </html>
