@@ -40,12 +40,12 @@
             Profile
         </h2>
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6 col-lg-5">
                 <div class="h-100 py-4 d-flex align-items-center justify-content-center">
                     <img class="rounded-circle w-50" src="./image/shoes-2021.jpg"/>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="h-100 py-4 d-flex align-items-center">
                     <dl>
                         <dt>名前</dt>
@@ -65,7 +65,7 @@
                     </dl>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-12 col-lg-3">
                 <div class="h-100 py-4">
                     <p>
                         2005年より、システムエンジニアとしてのキャリアをスタート。
@@ -89,8 +89,8 @@
             Engineering Skills
         </h2>
         <div class="row" data-masonry='{"percentPosition": true }'>
-            <div class="col-md-4" v-for="skill in skills">
-                <div class="card mb-4">
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4" v-for="skill in skills">
+                <div class="card">
                     <div class="card-body">
                         <div class="card-text">
                             <h3 class="h4 mb-3">{{ skill.type }}</h3>
