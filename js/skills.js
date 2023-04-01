@@ -3,10 +3,10 @@ const skills = [
         "type": "RDBMS/DWH",
         "items": [
             {"level": 5, "name": "MySQL",},
-            {"level": 3, "name": "Redshift",},
-            {"level": 2, "name": "Oracle",},
-            {"level": 2, "name": "SQLServer",},
-            {"level": 2, "name": "PostgreSQL",},
+            {"level": 4, "name": "Redshift",},
+            {"level": 3, "name": "Oracle",},
+            {"level": 3, "name": "SQLServer",},
+            {"level": 3, "name": "PostgreSQL",},
         ],
     },
     {
@@ -14,7 +14,8 @@ const skills = [
         "items": [
             {"level": 5, "name": "PHP",},
             {"level": 4, "name": "Java",},
-            {"level": 3, "name": "Python",},
+            {"level": 4, "name": "Python",},
+            {"level": 3, "name": "Ruby",},
         ],
     },
     {
@@ -56,7 +57,6 @@ const skills = [
         "items": [
             {"level": 3, "name": "AWS",},
             {"level": 1, "name": "GCP",},
-            {"level": 1, "name": "Azure",},
         ],
     },
     {
