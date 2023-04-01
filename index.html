@@ -79,7 +79,7 @@
                                 <tbody>
                                 <tr v-for="item in skill.items">
                                     <td>{{ item.name }}</td>
-                                    <td class="fs-6 text-nowrap text-sm-end">
+                                    <td class="fs-6 text-nowrap text-end">
                                         {{ "★".repeat(item.level) }}<!-- ソースコードの改行が隙間を生まないようにする
                                         --><span class="text-muted">{{"☆".repeat(5 - item.level) }}</span>
                                     </td>
