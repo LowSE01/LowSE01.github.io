@@ -17,3 +17,15 @@ dd {
 dd:before {
     content: '- ';
 }
+
+.card-img-wrapper {
+    overflow: hidden;
+}
+
+a .card-img-top {
+    transition: .3s ease-in-out;
+}
+
+a:hover .card-img-top {
+    transform: scale(1.2, 1.2);
+}

@@ -62,6 +62,34 @@
             </div>
         </div>
     </section>
+    <section class="mb-3" id="events">
+        <h2 class="p-3 mb-4 border-bottom">
+            <i class="fa-regular fa-calendar"></i>
+            Events
+        </h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4" v-for="event in events">
+                <div class="card h-100">
+                    <div class="card-img-wrapper">
+                        <a :href="event.link"
+                           class="stretched-link"
+                           target="_blank">
+                            <img :src="event.image" class="card-img-top img-fluid">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 card-title" v-html="event.title"></h3>
+                        <div>
+                            <span class="badge rounded-pill bg-secondary mx-1" v-for="tag in event.tags"
+                                  v-html="tag"/>
+                        </div>
+                        <p class="card-text fs-6 text-muted" v-html="event.text">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="mb-3" id="skills">
         <h2 class="p-3 mb-4 border-bottom">
             <i class="fa-solid fa-screwdriver-wrench"></i>
