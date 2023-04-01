@@ -29,12 +29,12 @@
 
 <body>
 <div class="container">
-    <section>
+    <header>
         <div class="my-5 text-center">
             <h1 class="display-1">Portfolio</h1>
         </div>
-    </section>
-    <section class="mb-3">
+    </header>
+    <section class="mb-3" id="profile">
         <h2 class="p-3 mb-4 border-bottom">
             <i class="fa-solid fa-user"></i>
             Profile
@@ -42,43 +42,22 @@
         <div class="row">
             <div class="col-md-6 col-lg-5">
                 <div class="h-100 py-4 d-flex align-items-center justify-content-center">
-                    <img class="rounded-circle w-50" src="./image/shoes-2021.jpg"/>
+                    <img :src="profile.image_url" class="rounded-circle w-50"/>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="h-100 py-4 d-flex align-items-center">
                     <dl>
-                        <dt>名前</dt>
-                        <dd>ロー (LowSE01)</dd>
-                        <dt>職種</dt>
-                        <dd>アプリケーションエンジニア</dd>
-                        <dd>データエンジニア</dd>
-                        <dt>肩書</dt>
-                        <dd>DATA Saber (4期生)</dd>
-                        <dd>Japan Tableau User Group Supporters</dd>
-                        <dt>趣味</dt>
-                        <dd>エンジニアリング</dd>
-                        <dd>キャンプ・BBQ</dd>
-                        <dd>クイズ・パズル・謎解き</dd>
-                        <dd>ロックフェス・ライブハウス巡り</dd>
-                        <dd>高校野球</dd>
+                        <template :key="question" v-for="(answers, question) in profile.questions">
+                            <dt v-html="question"></dt>
+                            <dd v-for="answer in answers" v-html="answer"/>
+                        </template>
                     </dl>
                 </div>
             </div>
             <div class="col-md-12 col-lg-3">
                 <div class="h-100 py-4">
-                    <p>
-                        2005年より、システムエンジニアとしてのキャリアをスタート。
-                        多くのC/SアプリやWebアプリの開発に携わりつつ、
-                        アプリケーションサイド、インフラサイド両面について広く触れ、そのたびに得られるワクワク感が、エンジニアを続けている原動力。
-                    </p>
-                    <p>
-                        2016年ごろより、データ活用の重要性とその将来性に魅了される。
-                        種々のOSSを駆使したデータ基盤の構築・運用を試行錯誤しながら行う傍ら、BIツールやPythonを使用した可視化などのノウハウを学ぶ。
-                    </p>
-                    <p>
-                        2018年にDATA Saberに認定。組織の枠を超えたデータ活用の啓蒙・推進活動に携わりながら、日々勉強中。
-                    </p>
+                    <p v-for="introduction in profile.introductions" v-html="introduction"/>
                 </div>
             </div>
         </div>
@@ -113,22 +92,15 @@
             </div>
         </div>
     </section>
-    <section class="mb-3">
+    <section class="mb-3" id="contact">
         <h2 class="p-3 mb-4 border-bottom">
             <i class="fa-solid fa-comment"></i>
             Contact
         </h2>
         <div class="row">
             <div class="col">
-                <a class="text-muted btn btn-link" href="https://twitter.com/VizFantasista" target="_blank">
-                    <i class="fa-3x fa-brands fa-square-twitter"></i>
-                </a>
-                <a class="text-muted btn btn-link" href="https://www.facebook.com/seiichiro.murakami.35"
-                   target="_blank">
-                    <i class="fa-3x fa-brands fa-facebook"></i>
-                </a>
-                <a class="text-muted btn btn-link" href="https://github.com/LowSE01" target="_blank">
-                    <i class="fa-3x fa-brands fa-github"></i>
+                <a :href="contact.link" class="text-muted btn btn-link" target="_blank" v-for="contact in contacts">
+                    <i :class="contact.icon_class"></i>
                 </a>
             </div>
         </div>
@@ -149,7 +121,8 @@
         referrerpolicy="no-referrer"
         src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 <script async
-        crossorigin="anonymous" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./js/app.js" type="module"></script>
